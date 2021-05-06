@@ -182,8 +182,3 @@ if want_readme == 'y':
 
         except:
             print('Error occured while creating readme.. :(')
-
-    f = open('README.md', 'a')
-    footer = f'<br><br><br>'
-    f.write(footer)
-    f.close()
