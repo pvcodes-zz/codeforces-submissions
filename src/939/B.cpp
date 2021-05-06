@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-typedef long long int ll;
+typedef unsigned long long int ull;
 
 #define test(t) \
     int t;      \
@@ -16,25 +16,25 @@ typedef long long int ll;
     cout.tie(NULL);
 
 void solve() {
-    string A;
-    cin >> A;
-    int i = 0;
-    int j = A.length() - 1;
-    while (i < j) {
-        if (A[i] == A[j]) {
-            i++;
-            j--;
-        } else {
-            if (i == 0 && A[j] == '0') {
-                j--;
-            } else {
-                cout << "NO" << endl;
-                return;
-            }
+    ull a, b;
+    cin >> a >> b;
+    ull mini = ULLONG_MAX;
+    ull ans1, ans2;
+    for (int i = 1; i <= b; i++) {
+        ull temp;
+        cin >> temp;
+        if (a >= temp && (a % temp < mini)) {
+            mini = a % temp;
+            ans1 = i;
+            ans2 = a / temp;
         }
     }
-    cout << "YES" << endl;
+    if (mini == ULLONG_MAX)
+        cout << 1 << " " << 0 << endl;
+    else
+        cout << ans1 << " " << ans2;
 }
+
 int main() {
     fast;
     // test(t)
