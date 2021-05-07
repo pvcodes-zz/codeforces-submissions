@@ -56,4 +56,4 @@
                 <td><a href="https://codeforces.com/contest/1499/">CF 1499</td> 
                     <td><a href="/src/1499/A.cpp">A</td>
                 </tr>
-        <br><br><br>
+        
